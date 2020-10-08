@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical">
+    <TextView
+        android:textSize="25sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/register_success">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/txtuser"
+        android:textSize="25sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/username">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/txtpass"
+        android:textSize="25sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/password">
+
+    </TextView>
+    <TextView
+        android:id="@+id/txtbirth"
+        android:textSize="25sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/birthdate">
+
+    </TextView>
+    <TextView
+        android:id="@+id/txtgender"
+        android:textSize="25sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gender">
+
+    </TextView>
+    <TextView
+        android:id="@+id/txthobby"
+        android:textSize="25sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hobbies">
+
+    </TextView>
+
+
+</LinearLayout>
