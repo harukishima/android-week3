@@ -8,7 +8,8 @@
         android:textSize="25sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/register_success">
+        android:text="@string/register_success"
+        android:textStyle="bold">
 
     </TextView>
 

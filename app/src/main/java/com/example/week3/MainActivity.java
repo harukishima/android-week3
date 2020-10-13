@@ -1,12 +1,15 @@
 package com.example.week3;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
+
+import java.util.ArrayList;
 
 public class MainActivity extends Activity {
     Button btnReset, btnSignup;
@@ -47,6 +50,29 @@ public class MainActivity extends Activity {
                 rdFemale.setChecked(false);
                 rdMale.setChecked(false);
 
+            }
+        });
+
+        btnSignup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntentA1A2 = new Intent(MainActivity.this, resultform.class);
+                Bundle myBundle1 = new Bundle();
+                myBundle1.putString("username", String.valueOf(edtUser.getText()));
+                myBundle1.putString("password", String.valueOf(edtPass.getText()));
+                myBundle1.putString("birthdate", String.valueOf(edtBirth.getText()));
+                myBundle1.putString("gender", (rdMale.isChecked()?"Male":"Female"));
+                ArrayList<String> chosenHobbies = new ArrayList<String>();
+                if(ckFutbal.isChecked())
+                    chosenHobbies.add("Futbal");
+                if(ckTennis.isChecked())
+                    chosenHobbies.add("Tennis");
+                if(ckOthers.isChecked())
+                    chosenHobbies.add("Others");
+                myBundle1.putStringArrayList("hobby", chosenHobbies);
+                myIntentA1A2.putExtras(myBundle1);
+
+                startActivity(myIntentA1A2);
             }
         });
     }
